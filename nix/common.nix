@@ -6,7 +6,7 @@
 
   # Update toolchain to ensure llvm-tools-preview is available
   toolchain = pkgs.rust-bin.stable.latest.default.override {
-    extensions = ["llvm-tools-preview" ];
+    extensions = ["llvm-tools-preview"];
   };
 
   # Create a custom crane lib instance that uses our toolchain
@@ -45,7 +45,7 @@
         commonArgs.nativeBuildInputs
         ++ [
           pkgs.cargo-llvm-cov
-          toolchain 
+          toolchain
         ];
 
       buildPhase = ''
@@ -53,7 +53,7 @@
         cargo llvm-cov test --workspace >> coverage-summary.txt
 
         # Generate all report formats
-        cargo llvm-cov report --html 
+        cargo llvm-cov report --html
 
         cargo llvm-cov report \
           --lcov \

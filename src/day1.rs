@@ -44,7 +44,7 @@ fn part2(input: &str) -> i64 {
     let n = histogram(right.squeeze(1));
     left.into_data()
         .iter()
-        .map(|e: i64| return n.get(&e).unwrap_or(&0) * e)
+        .map(|e: i64| n.get(&e).unwrap_or(&0) * e)
         .sum()
 }
 
@@ -87,7 +87,7 @@ mod tests {
             3    9
             3    3
         "#;
-        assert_eq!(part1(&input), 11);
+        assert_eq!(part1(input), 11);
     }
 
     #[test]
@@ -100,6 +100,6 @@ mod tests {
             3    9
             3    3
         "#;
-        assert_eq!(part2(&input), 31);
+        assert_eq!(part2(input), 31);
     }
 }
