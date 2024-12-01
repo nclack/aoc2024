@@ -26,3 +26,9 @@ Just made one myself using HashMap.
 
 I did find the `Tensor::iter_dims()` function which was pretty useful.
 It allows me to avoid the god awful slicing routines.
+
+### aftermath
+
+I setup the repo and setup test coverage. I also set up branch rules so I'd 
+have to submit prs. This will help me work on different days without having
+to finish.
