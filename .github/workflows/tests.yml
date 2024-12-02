@@ -9,7 +9,7 @@ jobs:
   cargo-test:
     strategy:
       matrix:
-        os: [macos-latest] #, windows-latest] # disable windows till I figure out the watch tests
+        os: [macos-latest, windows-latest] 
     runs-on: ${{ matrix.os }}
     timeout-minutes: 10
     
